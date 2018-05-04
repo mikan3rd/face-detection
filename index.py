@@ -39,7 +39,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    print("handle_message:", event)
+    # print("handle_message:", event)
     text = event.message.text
 
     if (text.startswith('http')):
@@ -59,7 +59,7 @@ def handle_message(event):
 
 @handler.add(MessageEvent, message=ImageMessage)
 def handle_image(event):
-    print("handle_image:", event)
+    # print("handle_image:", event)
 
     message_id = event.message.id
     message_content = line_bot_api.get_message_content(message_id)
@@ -76,6 +76,7 @@ def handle_image(event):
         reply_message(event, messages)
 
     except Exception as e:
+        print("error:", e)
         reply_message(event, TextSendMessage(text='エラーが発生しました'))
 
 
