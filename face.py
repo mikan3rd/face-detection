@@ -7,9 +7,7 @@ KEY1 = settings.KEY1
 endpoint = 'https://eastasia.api.cognitive.microsoft.com/face/v1.0/detect'
 
 face_url = 'http://idolnextstage.com/wp-content/uploads/2016/08/51.jpg'
-face_url2 = 'https://www.rbbtoday.com/imgs/p/RqJIzsl7cmxG8-cARbeaqilNLEDQQ0JFREdG/593777.jpg'
 test_url = 'http://i.gzn.jp/img/2018/02/08/capsnet/00_m.jpg'
-cat_url = 'https://s3-ap-northeast-1.amazonaws.com/petpedia/upload_by_admin/catlaugh_800.jpg'
 
 
 output_list = [
@@ -161,4 +159,4 @@ def get_face_info(image_url=None, image=None):
 
 
 if __name__ == "__main__":
-    get_face_info(face_url2)
+    get_face_info()

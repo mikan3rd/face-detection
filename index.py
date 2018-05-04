@@ -24,7 +24,7 @@ def callback():
 
     # get request body as text
     body = request.get_data(as_text=True)
-    print("body:", body)
+    # print("body:", body)
 
     # handle webhook body
     try:
