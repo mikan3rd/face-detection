@@ -86,6 +86,9 @@ def get_face_info(image_url=None, image=None):
     status = response.status_code
     data = response.json()
 
+    from pprint import pprint
+    pprint(data)
+
     if status != 200:
         error = ''
         if status == 429:
