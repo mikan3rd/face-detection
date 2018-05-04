@@ -16,7 +16,7 @@ output_list = [
     {'key': 'smile', 'label': '笑顔'},
     {'key': 'emotion', 'label': '感情'},
     {'key': 'makeup', 'label': '化粧'},
-    {'key': 'accessories', 'label': 'アクセサリー'},
+    {'key': 'accessories', 'label': '身につけているもの'},
 ]
 
 emotion_label = {
@@ -85,9 +85,6 @@ def get_face_info(image_url=None, image=None):
 
     status = response.status_code
     data = response.json()
-
-    from pprint import pprint
-    pprint(data)
 
     if status != 200:
         error = ''
