@@ -150,7 +150,7 @@ def get_face_info(image_url=None, image=None):
                 output = 'なし'
 
             else:
-                tmp_list = [accessories_label.get(label, '') for label in info]
+                tmp_list = [accessories_label[label['type']] for label in info]
                 output = ' '.join(tmp_list)
 
         text_list.append('[%s]\n%s' % (option['label'], output))
